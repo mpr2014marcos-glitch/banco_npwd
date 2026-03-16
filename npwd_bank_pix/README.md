@@ -114,5 +114,5 @@ NUI principal: web/dist/pix-config.js
 ## Licença
 Este projeto segue a licença do repositório onde for publicado.
 
-https://discord.gg/x8qxyCRyNt
+https://discord.gg/E9wDTDBUQQ
 
