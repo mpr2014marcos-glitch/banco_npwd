@@ -163,14 +163,14 @@ RegisterNetEvent('npwd_pix:register:resp', function(success, payload)
         lib.notify({ title = 'Banco', description = msg, type = success and 'success' or 'error' })
     end
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'registerResp',
         success = success,
         data = success and payload or msg
     })
     if success then
         uiMessage({
-            app = 'npwd_pix',
+            app = 'npwd_bank_pix',
             action = 'setMyCode',
             data = payload
         })
@@ -183,14 +183,14 @@ RegisterNetEvent('npwd_pix:randomRegister:resp', function(success, payload)
         lib.notify({ title = 'Banco', description = msg, type = success and 'success' or 'error' })
     end
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'registerResp',
         success = success,
         data = success and payload or msg
     })
     if success then
         uiMessage({
-            app = 'npwd_pix',
+            app = 'npwd_bank_pix',
             action = 'setMyCode',
             data = payload
         })
@@ -207,7 +207,7 @@ RegisterNetEvent('npwd_pix:transfer:resp', function(success, payload)
         lib.notify({ title = 'Banco', description = msg, type = success and 'success' or 'error' })
     end
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'transferResp',
         success = success,
         data = success and payload or msg
@@ -228,14 +228,14 @@ RegisterNetEvent('npwd_pix:delete:resp', function(success, payload)
         lib.notify({ title = 'Banco', description = msg, type = success and 'success' or 'error' })
     end
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'deleteResp',
         success = success,
         data = success and payload or msg
     })
     if success then
         uiMessage({
-            app = 'npwd_pix',
+            app = 'npwd_bank_pix',
             action = 'setMyCode',
             data = ''
         })
@@ -247,7 +247,7 @@ RegisterNetEvent('npwd_pix:updateBalance', function(balance)
         bal = tonumber(balance.balance or balance.bank or 0)
     end
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'updateBalance',
         data = { balance = bal }
     })
@@ -255,7 +255,7 @@ end)
 
 RegisterNetEvent('npwd_pix:setMyCode', function(code)
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'setMyCode',
         data = code
     })
@@ -263,7 +263,7 @@ end)
 
 RegisterNetEvent('npwd_pix:setRandomCode', function(code)
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'setRandomCode',
         data = code
     })
@@ -271,7 +271,7 @@ end)
 
 RegisterNetEvent('npwd_pix:setProfile', function(profile)
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'setProfile',
         data = profile
     })
@@ -279,7 +279,7 @@ end)
 
 RegisterNetEvent('npwd_pix:setTransactions', function(rows)
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'setTransactions',
         data = rows or {}
     })
@@ -287,7 +287,7 @@ end)
 
 RegisterNetEvent('npwd_pix:setContacts', function(rows)
     uiMessage({
-        app = 'npwd_pix',
+        app = 'npwd_bank_pix',
         action = 'setContacts',
         data = rows or {}
     })
