@@ -31,13 +31,13 @@ Aplicativo do NPWD para transferências bancárias usando qbx_core. Inclui cadas
 ## Lembre-se de deixar seu config do smartphone mais ou menos assim 
  - "defaultContacts": [],
  -   "disabledApps": ["BROWSER"],
- -   "apps": ["npwd_pix", "npwd_qbx_mail", "npwd_qbx_garages"],
+ -   "apps": ["npwd_bank_pix", "npwd_qbx_mail", "npwd_qbx_garages"],
  -   "voiceMessage": {
  -     "enabled": true,
- -    "authorizationHeader": "Authorization",
- -     "url": "https://api.fivemanage.com/api/audio",
- -     "returnedDataIndexes": ["url"]
- -   }
+  -    "authorizationHeader": "Authorization",
+  -    "url": "https://api.fivemanage.com/api/audio",
+  -    "returnedDataIndexes": ["url"]
+  -  }
 
 O arquivo fxmanifest.lua declara as dependências e carrega `@oxmysql/lib/MySQL.lua`.
 
