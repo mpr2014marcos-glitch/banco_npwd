@@ -3,7 +3,7 @@ import { importShared } from './__federation_fn_import.js';
 let React;
 let useEffect, useState, createElement, Fragment;
 let fetchNui;
-const RESOURCE = 'npwd_pix';
+const RESOURCE = 'npwd_bank_pix';
 
 const __init = (async () => {
   try {
@@ -149,7 +149,7 @@ function BankPixApp() {
     const handler = (event) => {
       try {
         const msg = event.data;
-        if (!msg || msg.app !== 'npwd_pix') return;
+        if (!msg || msg.app !== 'npwd_bank_pix') return;
         
         if (msg.action === 'updateBalance') {
           const v = Number((msg.data && msg.data.balance) || 0);
@@ -630,10 +630,10 @@ const PixIcon = () => createElement('svg', { width: 24, height: 24, viewBox: '0 
 
 const NotificationIcon = PixIcon;
 
-const path = '/npwd_pix';
+const path = '/npwd_bank_pix';
 
 export default () => ({
-  id: 'npwd_pix',
+  id: 'npwd_bank_pix',
   nameLocale: 'Banco',
   color: '#fff',
   backgroundColor: '#ff8800ff',
