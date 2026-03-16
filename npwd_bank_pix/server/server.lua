@@ -552,7 +552,7 @@ end)
 
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
-        print('^2[RuFaTo]^7 Resource carregado com sucesso!')
+        print('^2[RuFaTo Store]^7 Resource carregado com sucesso!')
         print('^3[Discord]^7 Entre em nossa comunidade: ^5https://discord.gg/E9wDTDBUQQ^7')
     end
 end)
